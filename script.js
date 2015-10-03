@@ -21,7 +21,7 @@ function checkCookie() {
     if (user != "") {
         document.getElementById("lel").innerHTML = "Hello, "+user;
     } else {
-        user = prompt("What's your name?", "");
+        // user = prompt("What's your name?", "");
 
         if (user != "" && user != null) {
             setCookie("username", user, 365);
