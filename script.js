@@ -35,13 +35,13 @@ function checkform()
     if (document.feedback.field.value == '')
     {
         // something is wrong
-        alert('There is a problem with the first field');
+        document.write('<h2>There is a problem with the first field</h2>');
         return false;
     }
     else if (document.feedback.field.value == 'Michael')
     {
         // something else is wrong
-        alert('Welcome, sir.');
+        document.write('<h2>Welcome, sir.</h2>');
         return true;
     }
     // If the script gets this far through all of your fields
