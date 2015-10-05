@@ -29,3 +29,23 @@ function checkCookie() {
 		document.getElementById("lel").innerHTML = "Hello, "+user;
     }
 }
+
+function checkform()
+{
+    if (document.feedback.field.value == '')
+    {
+        // something is wrong
+        alert('There is a problem with the first field');
+        return false;
+    }
+    else if (document.feedback.field.value == 'Michael')
+    {
+        // something else is wrong
+        alert('Welcome, sir.');
+        return true;
+    }
+    // If the script gets this far through all of your fields
+    // without problems, it's ok and you can submit the form
+
+    return true;
+}
