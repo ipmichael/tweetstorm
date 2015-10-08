@@ -1,3 +1,11 @@
+function readText (form) {
+    var temp = form.inputbox.value;
+    alert ("You typed: " + temp);
+}
+function writeText (form) {
+    form.inputbox.value = "Have a nice day!"
+}
+
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -16,36 +24,26 @@ function getCookie(cname) {
     return "";
 }
 
+function logCookie(){
+    console.log(document.cookie);
+}
+
+function addToCookie(key,value){
+    document.cookie = key + "=" + value + ";"+document.cookie;
+}
+
+
+
 function checkCookie() {
     var user = getCookie("username");
     if (user != "") {
         document.getElementById("lel").innerHTML = "Hello, "+user;
     } else {
-        // user = prompt("What's your name?", "");
+        user = prompt("What's your name?", "");
 
         if (user != "" && user != null) {
             setCookie("username", user, 365);
         }
-		document.getElementById("lel").innerHTML = "Hello, "+user;
+        document.getElementById("lel").innerHTML = "Hello, "+user;
     }
-}
-
-function checkform()
-{
-    if (document.feedback.field.value == '')
-    {
-        // something is wrong
-        document.write('<h2>There is a problem with the first field</h2>');
-        return false;
-    }
-    else if (document.feedback.field.value == 'Michael')
-    {
-        // something else is wrong
-        document.write('<h2>Welcome, sir.</h2>');
-        return true;
-    }
-    // If the script gets this far through all of your fields
-    // without problems, it's ok and you can submit the form
-
-    return true;
 }
