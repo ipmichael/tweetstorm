@@ -1,6 +1,6 @@
 function readText (form) {
     var temp = form.inputbox.value;
-    alert ("You typed: " + temp);
+    document.getElementById("textbox").innerHTML= "You typed: " + temp;
 }
 function writeText (form) {
     form.inputbox.value = "Have a nice day!"
