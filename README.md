@@ -1,3 +1,4 @@
 # tweetstorm
 a project for brainstorming + twitter
-hello, world
+
+there's a form in the front. functionality is limited atm 
