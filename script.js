@@ -1,3 +1,4 @@
+
 function readText (form) {
     var temp = form.inputbox.value;
     document.getElementById("textbox").innerHTML= "You typed: " + temp;
@@ -5,6 +6,13 @@ function readText (form) {
 function writeText (form) {
     // form.inputbox.value = "Have a nice day!"
     document.getElementById("textbox").innerHTML= "Hello";
+}
+
+document.onkeydown=function(){
+    if(window.event.keyCode=='13'){
+        var temp = form.inputbox.value;
+        document.getElementById("textbox").innerHTML= "You typed: " + temp;
+    }
 }
 
 function setCookie(cname, cvalue, exdays) {
