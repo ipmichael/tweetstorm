@@ -3,7 +3,8 @@ function readText (form) {
     document.getElementById("textbox").innerHTML= "You typed: " + temp;
 }
 function writeText (form) {
-    form.inputbox.value = "Have a nice day!"
+    // form.inputbox.value = "Have a nice day!"
+    document.getElementById("textbox").innerHTML= "Hello";
 }
 
 function setCookie(cname, cvalue, exdays) {
