@@ -19,12 +19,14 @@
 		<div id = "maincenter">
 			<h1>tweetstorm</h1>
 			<form name = "feedback" method = "get" action="">
-				<input type = "text" name = "inputbox" value = "">
+				<input type = "text" name = "inputbox" id = "input1" value = "">
+				<input type="submit" style="display:none"/>
 				<input type="button" NAME="button1" Value="Read" onClick="readText(this.form)">
 				<input TYPE="button" NAME="button2" Value="Write" onClick="writeText(this.form)">
 			</form>
 
 			<p id = "textbox"></p>
+			<p id = "reader"></p>
 		</div>
 	</body>
 
