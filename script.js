@@ -1,4 +1,7 @@
 
+document.getElementById("reader").innerHTML= form.inputbox.value;
+
+
 function readText (form) {
     var temp = form.inputbox.value;
     document.getElementById("textbox").innerHTML= "You typed: " + temp;
