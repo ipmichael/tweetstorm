@@ -1,5 +1,5 @@
-
-document.getElementById("reader").innerHTML= form.inputbox.value;
+var inputbox = document.getElementById("input1").value;
+document.getElementById("reader").value= inputbox;
 
 
 function readText (form) {
