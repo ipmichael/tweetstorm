@@ -1,6 +1,8 @@
-$(document).ready(function(){
-    $("#textbox").text("hello world");
-});
+$( "input" )
+  .keyup(function() {
+    var value = $( this ).val();
+    $( "p" ).text( value );
+  }).keyup();
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
