@@ -1,23 +1,6 @@
-var inputbox = document.getElementById("input1").value;
-document.getElementById("reader").value= inputbox;
-
-
-function readText (form) {
-    var temp = form.inputbox.value;
-    document.getElementById("textbox").innerHTML= "You typed: " + temp;
-}
-function writeText (form) {
-    // form.inputbox.value = "Have a nice day!"
-    document.getElementById("textbox").innerHTML= "Hello";
-}
-
-document.onkeydown=function(){
-    if(window.event.keyCode=='13'){
-        var temp = form.inputbox.value;
-        document.getElementById("textbox").innerHTML= "You typed: " + temp;
-    }
-}
-
+$(document).ready(function(){
+    $("#textbox").text("hello world");
+});
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
