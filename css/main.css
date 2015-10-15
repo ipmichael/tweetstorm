@@ -22,3 +22,17 @@ h1{
 	text-align: center;
 }
 
+#lineForm{
+    border:0;
+    border-bottom: 3px solid;
+    outline-width: 0;
+    width: 10em;
+    font-size: 16px;
+    text-align: center;
+    font-family: "Raleway";
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-left: -5em;
+    margin-top: 2em;
+}
