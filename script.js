@@ -1,4 +1,4 @@
-$( "#input1" ).keydown(function(event) {
+$( "#lineForm" ).keydown(function(event) {
     if(event.which == 13){
         $( "#textbox" ).text( $( this ).val() );
     }
