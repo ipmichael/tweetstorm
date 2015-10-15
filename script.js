@@ -1,7 +1,9 @@
-$( "input" ).keyup(function() {
-    var value = $( this ).val();
-    $( "p" ).text( value );
+$( "#input1" ).keydown(function(event) {
+    if(event.which == 13){
+        $( "#textbox" ).text( $( this ).val() );
+    }
   }).keyup();
+
 
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
