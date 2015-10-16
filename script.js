@@ -4,6 +4,13 @@ $( "#lineForm" ).keydown(function(event) {
     }
   }).keyup();
 
+$.get(
+    "michaelip.me",
+    {paramOne : 1, paramX : 'abc'},
+    function(data) {
+       $("#just").text($('page content: ' + data));
+    }
+);
 
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
