@@ -4,14 +4,14 @@ $( "#lineForm" ).keydown(function(event) {
     }
   }).keyup();
 
-$("#action").click( 
-    $.ajax({
-      url: ,
-      data: data,
-      success: success,
-      dataType: dataType
-    });
-);
+$("#action").click( function(){
+    $.getJSON("http://www.telize.com/jsonip?callback=?",
+        function(json) {
+            var temp = "12345";
+            $("#just").text("My IP address is : " + json.ip);
+        }
+    );
+});
 
 
 
