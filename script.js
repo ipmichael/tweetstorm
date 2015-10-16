@@ -1,6 +1,6 @@
 $( "#lineForm" ).keydown(function(event) {
     if(event.which == 13){
-        $( "#textbox" ).text( $( this ).val() );
+        var txt =  $(this).val();
     }
   }).keyup();
 
