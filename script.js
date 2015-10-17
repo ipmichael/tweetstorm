@@ -7,7 +7,6 @@ $( "#lineForm" ).keydown(function(event) {
 $("#action").click( function(){
     $.getJSON("http://www.telize.com/jsonip?callback=?",
         function(json) {
-            var temp = "12345";
             $("#just").text("My IP address is : " + json.ip);
         }
     );
