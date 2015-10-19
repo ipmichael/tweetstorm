@@ -1,3 +1,11 @@
+$( document ).ready(function() {
+    $.getJSON("http://www.telize.com/jsonip?callback=?",
+        function(json) {
+            var ipAddr = json.ip;
+        }
+    );
+});
+
 $( "#lineForm" ).keydown(function(event) {
     if(event.which == 13){
         var txt =  $(this).val();
@@ -7,7 +15,7 @@ $( "#lineForm" ).keydown(function(event) {
 $("#action").click( function(){
     $.getJSON("http://www.telize.com/jsonip?callback=?",
         function(json) {
-            $("#just").text("My IP address is : " + json.ip);
+            $("#just").text(ipAddr);
         }
     );
 });
