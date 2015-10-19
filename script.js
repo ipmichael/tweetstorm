@@ -1,7 +1,16 @@
+var ipAddr="";
 $( document ).ready(function() {
     $.getJSON("http://www.telize.com/jsonip?callback=?",
         function(json) {
-            var ipAddr = json.ip;
+            if(json.hasOwnProperty('ip')){
+                // ipAddr=ipAddr.concat(json.ip);
+                ipAddr+=json.ip;
+            }
+
+            if(json.hasOwnProperty('region')){
+                ipAddr=ipAddr.concat(json.region);
+            }
+            
         }
     );
 });
