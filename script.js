@@ -1,14 +1,19 @@
-var ipAddr="";
+var ipAddr="",region="",country="";
 $( document ).ready(function() {
-    $.getJSON("http://www.telize.com/jsonip?callback=?",
+    $.getJSON("http://www.telize.com/geoip?callback=?",
         function(json) {
+            console.log(json);
             if(json.hasOwnProperty('ip')){
                 // ipAddr=ipAddr.concat(json.ip);
-                ipAddr+=json.ip;
+                ipAddr=json.ip;
             }
 
             if(json.hasOwnProperty('region')){
-                ipAddr=ipAddr.concat(json.region);
+                region=json.region;
+            }
+
+            if(json.hasOwnProperty('country')){
+                country = json.country;
             }
             
         }
@@ -22,11 +27,7 @@ $( "#lineForm" ).keydown(function(event) {
   }).keyup();
 
 $("#action").click( function(){
-    $.getJSON("http://www.telize.com/jsonip?callback=?",
-        function(json) {
-            $("#just").text(ipAddr);
-        }
-    );
+    $("#just").text("hello");
 });
 
 
