@@ -20,9 +20,18 @@ $( document ).ready(function() {
     );
 });
 
-$( "#lineForm" ).keydown(function(event) {
+
+
+$( "#just" ).keydown(function(event) {
     if(event.which == 13){
         var txt =  $(this).val();
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://www.codecademy.com/", false);
+        xhr.send();
+
+        console.log(xhr.status);
+        console.log(xhr.statusText);
     }
   }).keyup();
 
