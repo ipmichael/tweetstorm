@@ -2,7 +2,6 @@ var ipAddr="",region="",country="";
 $( document ).ready(function() {
     $.getJSON("http://www.telize.com/geoip?callback=?",
         function(json) {
-            console.log(json);
             if(json.hasOwnProperty('ip')){
                 // ipAddr=ipAddr.concat(json.ip);
                 ipAddr=json.ip;
@@ -22,21 +21,20 @@ $( document ).ready(function() {
 
 
 
-$( "#just" ).keydown(function(event) {
-    if(event.which == 13){
-        var txt =  $(this).val();
+$( "#lineform" ).keydown(function(event) {
+    if(event.keyCode == 13){
+        $("#para").text($(this).val());
+        // var xhr = new XMLHttpRequest();
+        // xhr.open("GET", "https://www.codecademy.com/", false);
+        // xhr.send();
 
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://www.codecademy.com/", false);
-        xhr.send();
-
-        console.log(xhr.status);
-        console.log(xhr.statusText);
+        // console.log(xhr.status);
+        // console.log(xhr.statusText);
     }
-  }).keyup();
+}).keyup();
 
 $("#action").click( function(){
-    $("#just").text("hello");
+    $("#para").text("hello");
 });
 
 
