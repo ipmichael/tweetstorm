@@ -21,7 +21,7 @@ $( document ).ready(function() {
 
 
 
-$( "#lineform" ).keydown(function(event) {
+$( "#lineForm" ).keyup(function(event) {
     if(event.keyCode == 13){
         $("#para").text($(this).val());
         // var xhr = new XMLHttpRequest();
@@ -31,10 +31,10 @@ $( "#lineform" ).keydown(function(event) {
         // console.log(xhr.status);
         // console.log(xhr.statusText);
     }
-}).keyup();
+});
 
 $("#action").click( function(){
-    $("#para").text("hello");
+    $(this).append("<button>hi</button>");
 });
 
 
